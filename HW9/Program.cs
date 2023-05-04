@@ -9,12 +9,12 @@ namespace HW9
         {
             Exception myEx = new Exception("Неведомая ошибка");
             StackOverflowException stackOverflowException = new StackOverflowException();
-            //NullReferenceException nullReferenceException = new NullReferenceException(); почему-то выпадает в ошибку... не смотря на нахождение в блоке try. 
+            NullReferenceException nullReferenceException = new NullReferenceException(); // почему-то выпадает в ошибку... не смотря на нахождение в блоке try. 
             // не выпадает в ошибку если экземпляр класса запихнуть в конец массива
             ArgumentException argumentException = new ArgumentException();
             IndexOutOfRangeException indexOutOfRangeException = new IndexOutOfRangeException();
             DivideByZeroException divideByZeroException = new DivideByZeroException();
-            Exception[] exArray = { myEx, argumentException, indexOutOfRangeException, stackOverflowException, divideByZeroException, stackOverflowException };
+            Exception[] exArray = { myEx, argumentException, indexOutOfRangeException, stackOverflowException, divideByZeroException, nullReferenceException };
 
             foreach (var ex in exArray)
             {
